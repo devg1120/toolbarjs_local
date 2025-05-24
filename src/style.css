@@ -4,13 +4,18 @@ select:focus {
 
 .button_off {
   border-radius: 0px;
-  box-shadow:  1px  1px #808080;
+  box-shadow:  1.5px  1.5px #808080;
+
+}
+.button_off:active {
+  border-radius: 0px;
+  box-shadow: 1.5px 1.5px  inset #808080;
 
 }
 
 .button_on {
   border-radius: 0px;
-  box-shadow: 1px 1px  inset #808080;
+  box-shadow: 1.5px 1.5px  inset #808080;
 
 }
 

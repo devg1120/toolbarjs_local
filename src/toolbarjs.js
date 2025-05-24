@@ -86,7 +86,7 @@ function createButtons(toolbar, style, buttons = [{
       if (button.type == "click") {
          const btnNode = document.createElement('button')
          //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
-         btnNode.style.border = '0px'
+         btnNode.style.border = '0px '
          btnNode.style.margin = '2px'
          btnNode.style.backgroundColor = style.button_color
 
@@ -99,6 +99,7 @@ function createButtons(toolbar, style, buttons = [{
          const btnNode = document.createElement('button')
          //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          btnNode.style.border = '0px'
+         //btnNode.style.border = '1px solid #333'
          btnNode.style.margin = '2px'
          btnNode.style.backgroundColor = style.button_color
          btnNode.classList.add("button_off");
@@ -158,6 +159,8 @@ function createButtons(toolbar, style, buttons = [{
          toolbar.appendChild(datalist)
 
          const buttonNode = document.createElement('button')
+         buttonNode.style.border = '0px'
+         buttonNode.style.margin = '2px'
          buttonNode.classList.add("button_off");
          buttonNode.innerHTML = button.label
          buttonNode.addEventListener('click', button.select)
