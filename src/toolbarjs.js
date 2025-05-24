@@ -85,32 +85,47 @@ function createButtons(toolbar, style, buttons = [{
   buttons.forEach((button) => {
       if (button.type == "click") {
          const btnNode = document.createElement('button')
-         btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
+         //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          btnNode.style.border = '0px'
-         btnNode.style.margin = '1px'
+         btnNode.style.margin = '2px'
          btnNode.style.backgroundColor = style.button_color
 
+         btnNode.classList.add("button_off");
          btnNode.innerHTML = button.label
          btnNode.addEventListener('click', button.click)
          toolbar.appendChild(btnNode)
   
       }  else  if (button.type == "toggle") {
          const btnNode = document.createElement('button')
-         btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
+         //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          btnNode.style.border = '0px'
-         btnNode.style.margin = '1px'
+         btnNode.style.margin = '2px'
          btnNode.style.backgroundColor = style.button_color
+         btnNode.classList.add("button_off");
 
          btnNode.innerHTML = button.label
-         btnNode.addEventListener('click', button.click)
+         btnNode.addEventListener('click', (event) => {
+             if (btnNode.classList.contains("button_off")) {
+                         btnNode.classList.remove("button_off");
+                         btnNode.classList.add("button_on");
+		         button.onclick();
+	     
+	     } else if (btnNode.classList.contains("button_on")) {
+                         btnNode.classList.remove("button_on");
+                         btnNode.classList.add("button_off");
+		         button.offclick();
+	     }
+	 });
+
          toolbar.appendChild(btnNode)
   
       }  else  if (button.type == "menu") {
          const uiNode = document.createElement('select')
-         uiNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
+         //uiNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          uiNode.style.border = '0px'
-         uiNode.style.margin = '1px'
+         uiNode.style.margin = '2px'
          uiNode.style.backgroundColor = style.button_color
+         uiNode.classList.add("button_off");
          uiNode.innerHTML = button.label
          uiNode.addEventListener('change', button.change)
          toolbar.appendChild(uiNode)
@@ -141,7 +156,9 @@ function createButtons(toolbar, style, buttons = [{
 
          toolbar.appendChild(input)
          toolbar.appendChild(datalist)
+
          const buttonNode = document.createElement('button')
+         buttonNode.classList.add("button_off");
          buttonNode.innerHTML = button.label
          buttonNode.addEventListener('click', button.select)
          toolbar.appendChild(buttonNode)

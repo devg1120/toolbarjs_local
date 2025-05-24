@@ -1,13 +1,16 @@
-
-menu,
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  width: 400px;
+select:focus {
+  outline: none; 
 }
 
-li {
-  flex-grow: 1;
+.button_off {
+  border-radius: 0px;
+  box-shadow:  1px  1px #808080;
+
+}
+
+.button_on {
+  border-radius: 0px;
+  box-shadow: 1px 1px  inset #808080;
+
 }
 

@@ -46,8 +46,11 @@ let buttons = [
   {
     label: 'Bar',
     type: "toggle",
-    click: event => {
-      console.log('Bar was clicked.')
+    onclick: event => {
+      console.log('Bar was toggle clicked. on ')
+    },
+    offclick: event => {
+      console.log('Bar was toggle clicked. off ')
     }
   },
   {
