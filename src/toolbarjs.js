@@ -4,6 +4,7 @@ export default function toolbar(...options) {
   let [ parentid, location, style, buttons ] = options
 
   const toolbar = document.createElement('toolbar')
+  toolbar.classList.add("gstoolbar")
   const toolbarContainer = document.createElement('toolbar-container')
 
   styleToolbar(toolbar, style)
@@ -83,11 +84,20 @@ function createButtons(toolbar, style, buttons = [{
   }
 }]) {
   buttons.forEach((button) => {
-      if (button.type == "click") {
+      if (button.type == "split") {
+         const divNode = document.createElement('label')
+         //divNode.style.border = '0px '
+         divNode.style.marginLeft = '8px '
+         divNode.style.marginRight = '8px '
+         divNode.classList.add("splitter");
+         toolbar.appendChild(divNode)
+
+      }  else  if (button.type == "click") {
          const btnNode = document.createElement('button')
          //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          btnNode.style.border = '0px '
-         btnNode.style.margin = '2px'
+         //btnNode.style.marginLeft = '3px'
+         btnNode.style.marginLeft = button.marginLeft;
          btnNode.style.backgroundColor = style.button_color
 
          btnNode.classList.add("button_off");
@@ -100,7 +110,8 @@ function createButtons(toolbar, style, buttons = [{
          //btnNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          btnNode.style.border = '0px'
          //btnNode.style.border = '1px solid #333'
-         btnNode.style.margin = '2px'
+         //btnNode.style.marginLeft = '3px'
+         btnNode.style.marginLeft = button.marginLeft;
          btnNode.style.backgroundColor = style.button_color
          btnNode.classList.add("button_off");
 
@@ -124,7 +135,8 @@ function createButtons(toolbar, style, buttons = [{
          const uiNode = document.createElement('select')
          //uiNode.style.boxShadow = '1px 1px 0px 0px rgba(0, 0, 0, 0.125)'
          uiNode.style.border = '0px'
-         uiNode.style.margin = '2px'
+         //uiNode.style.marginLeft = '3px'
+         uiNode.style.marginLeft = button.marginLeft;
          uiNode.style.backgroundColor = style.button_color
          uiNode.classList.add("button_off");
          uiNode.innerHTML = button.label
@@ -140,6 +152,10 @@ function createButtons(toolbar, style, buttons = [{
       }  else  if (button.type == "color") {
          const input = document.createElement('input')
 	 input.id = "color";
+         input.style.border = "0px";
+         //input.style.marginLeft = "3px";
+         input.style.marginLeft = button.marginLeft;
+         input.style.width = "50px";
 	 input.setAttribute("type", "color");
 
   	 input.setAttribute("list", "color-picker");
@@ -160,12 +176,12 @@ function createButtons(toolbar, style, buttons = [{
 
          const buttonNode = document.createElement('button')
          buttonNode.style.border = '0px'
-         buttonNode.style.margin = '2px'
+         buttonNode.style.marginLeft = '0px'
          buttonNode.classList.add("button_off");
          buttonNode.innerHTML = button.label
          buttonNode.addEventListener('click', button.select)
          toolbar.appendChild(buttonNode)
-        
+      
       }
   })
   

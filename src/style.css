@@ -1,21 +1,38 @@
+@scope (.gstoolbar) {
+
+button, select, input  {
+  vertical-align : top;
+  margin-top: 2px;
+  height: 20px;
+}
+
 select:focus {
   outline: none; 
 }
 
-.button_off {
+input {
   border-radius: 0px;
   box-shadow:  1.5px  1.5px #808080;
-
 }
+
+.splitter {
+  border-left:5px double #808080; 
+}
+
+.button_off  {
+  border-radius: 0px;
+  box-shadow:  1.5px  1.5px #808080;
+}
+
 .button_off:active {
   border-radius: 0px;
   box-shadow: 1.5px 1.5px  inset #808080;
-
 }
 
 .button_on {
   border-radius: 0px;
   box-shadow: 1.5px 1.5px  inset #808080;
+}
 
 }
 

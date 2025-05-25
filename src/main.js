@@ -30,22 +30,24 @@ let buttons = [
  {
     label: '<i class="fa fa-plus"></i>',
     type: "click",
+    marginLeft: "2px",
     click: event => {
       console.log('plus was clicked.')
     }
-
-
   },
   {
     label: 'Foo',
     type: "click",
+    marginLeft: "8px",
     click: event => {
       console.log('Foo was clicked.')
     }
   },
+  { type: "split" },
   {
     label: 'Bar',
     type: "toggle",
+    marginLeft: "0px",
     onclick: event => {
       console.log('Bar was toggle clicked. on ')
     },
@@ -56,6 +58,7 @@ let buttons = [
   {
     label: 'MENU',
     type: "menu",
+    marginLeft: "15px",
     change: event => {
       console.log('Menu change.', event.target.value)
     },
@@ -77,6 +80,7 @@ let buttons = [
   {
     label: 'HSS',
     type: "color",
+    marginLeft: "15px",
     select: event => {
       const color = document.getElementById('color').value;
       console.log('HSS was select.', color)
