@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTMLとCSSの連携</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<div class="pulldownset">
+
+   <!-- ========================================== -->
+   <!-- (※1)▼1段階目(メイン)のプルダウンメニュー -->
+   ■住所を選択：
+   <select class="mainselect">
+      <option value="">市を選択</option>
+      <option value="kobe">神戸市</option>
+      <option value="osaka">大阪市</option>
+      <option value="kyoto">京都市</option>
+      <option value="other">その他</option>
+   </select>
+
+   <!-- ================================================================ -->
+   <!-- (※2)▼項目「神戸市」に対応する2段階目(サブ)のプルダウンメニュー -->
+   <select id="kobe" class="subbox">
+      <option value="">神戸の区を選択</option>
+      <option value="hn">東灘区</option>
+      　：　：　：
+      <option value="hg">兵庫区</option>
+      <option value="sm">須磨区</option>
+   </select>
+
+   <!-- ================================================================ -->
+   <!-- (※3)▼項目「大阪市」に対応する2段階目(サブ)のプルダウンメニュー -->
+   <select id="osaka" class="subbox">
+      <option value="">大阪の区を選択</option>
+      <option value="kt">北区</option>
+      　：　：　：
+      <option value="tj">天王寺区</option>
+      <option value="ab">阿倍野区</option>
+      <option value="se">住之江区</option>
+   </select>
+
+   <!-- ================================================================ -->
+   <!-- (※4)▼項目「京都市」に対応する2段階目(サブ)のプルダウンメニュー -->
+   <select id="kyoto" class="subbox">
+      <option value="">京都の区を選択</option>
+      <option value="uk">右京区</option>
+       　：　：　：
+      <option value="fs">伏見区</option>
+      <option value="ys">山科区</option>
+   </select>
+
+   <!-- ====================================================== -->
+   <!-- (※5)▼項目「その他」に対応する2段階目(サブ)のボックス -->
+   <span id="other" class="subbox">
+      自由入力：<input type="text" value="" size="15">
+   </span>
+
+</div>
+<!--
+<script type="module" src="main.js"></script>
+-->
+</body>
+</html>

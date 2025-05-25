@@ -3,6 +3,23 @@
 # FontAwesomeの使い方
 
 https://fa-sample.com/howtouse/use/
+
+<i class="fas fa-check-circle fa-xs"></i> <!-- 0.75em -->
+<i class="fas fa-check-circle fa-sm"></i> <!-- 0.875em -->
+<i class="fas fa-check-circle fa-lg"></i> <!-- 1.33em -->
+<i class="fas fa-check-circle fa-2x"></i> <!-- 2em -->
+<i class="fas fa-check-circle fa-3x"></i> <!-- 3em -->
+<i class="fas fa-check-circle fa-4x"></i> <!-- 4em -->
+<i class="fas fa-check-circle fa-5x"></i> <!-- 5em -->
+<i class="fas fa-check-circle fa-6x"></i> <!-- 6em -->
+<i class="fas fa-check-circle fa-7x"></i> <!-- 7em -->
+<i class="fas fa-check-circle fa-8x"></i> <!-- 8em -->
+<i class="fas fa-check-circle fa-9x"></i> <!-- 9em -->
+<i class="fas fa-check-circle fa-10x"></i> <!-- 10em -->
+
+
+
+
 https://fontawesome.com/download
 
 # toolbatjs

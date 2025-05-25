@@ -4,6 +4,8 @@ import { setupCounter } from './counter.js'
 import toolbarjs from './toolbarjs'
 import  "./fontawesome-free-6.7.2-web/css/all.min.css"
 
+import image_svg from './svg/image.svg';
+
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -26,9 +28,27 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 
+// https://fontawesome.com/search?p=3&o=r&ic=free&s=solid&ip=classic
+//
 let buttons = [
- {
-    label: '<i class="fa fa-plus"></i>',
+  {
+    label: '<i class="fa fa-plus fa-xs"></i>',
+    type: "click",
+    marginLeft: "2px",
+    click: event => {
+      console.log('plus was clicked.')
+    }
+  },
+  {
+    label: '<i class="fa-solid fa-up-down-left-right fa-xs"</i>',
+    type: "click",
+    marginLeft: "2px",
+    click: event => {
+      console.log('plus was clicked.')
+    }
+  },
+  {
+    label: image_svg,
     type: "click",
     marginLeft: "2px",
     click: event => {
@@ -65,18 +85,59 @@ let buttons = [
     menu: [
         {
          label: 'sub1',
+         type: "item",
          value: 'sub1'
         },
         {
-         label: 'sub2',
+         label: '<i class="fa fa-plus fa-xs">subx</i>',
+         type: "item",
          value: 'sub2'
         },
         {
          label: 'sub3',
+         type: "item",
          value: 'sub3'
         }
     ]
   },
+
+  {
+    label: 'TREE',
+    type: "menu",
+    marginLeft: "15px",
+    change: event => {
+      console.log('Menu change.', event.target.value)
+    },
+    menu: [
+        {
+         label: 'sub1',
+         type: "item",
+         value: 'sub1'
+        },
+        {
+         label: 'sub2',
+         type: "submenu",
+         menu: [
+                  {
+                    label: 'child1',
+                    type: "item",
+                    value: 'child1'
+             	 },
+                  {
+                    label: 'child2',
+                    type: "item",
+                    value: 'child2'
+             	 }
+             ]
+        },
+        {
+         label: 'sub3',
+         type: "item",
+         value: 'sub3'
+        }
+    ]
+  },
+  
   {
     label: 'HSS',
     type: "color",

@@ -1,6 +1,6 @@
 @scope (.gstoolbar) {
 
-button, select, input  {
+button, select, input, img  {
   vertical-align : top;
   margin-top: 2px;
   height: 20px;
