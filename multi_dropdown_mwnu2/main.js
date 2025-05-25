@@ -2,52 +2,27 @@
 
 console.log("start");
 
-// ▼HTMLの読み込み直後に実行：
-document.addEventListener('DOMContentLoaded', function() {
+const dropdownBtn = document.getElementById("btn");
+const dropdownMenu = document.getElementById("dropdown");
+const toggleArrow = document.getElementById("arrow");
 
-   // ▼2階層目の要素を全て非表示にする
-   var allSubBoxes = document.getElementsByClassName("subbox");
-   for( var i=0 ; i<allSubBoxes.length ; i++) {
-      allSubBoxes[i].style.display = 'none';
-   }
+// Toggle dropdown function
+const toggleDropdown = function () {
+  dropdownMenu.classList.toggle("show");
+  toggleArrow.classList.toggle("arrow");
+};
 
-
-
-   // ▼全てのプルダウンメニューセットごとに処理
-   var mainBoxes = document.getElementsByClassName('pulldownset');
-   for( var i=0 ; i<mainBoxes.length ; i++) {
-   
-      var mainSelect = mainBoxes[i].getElementsByClassName("mainselect");   // 1階層目(メイン)のプルダウンメニュー（※後でvalue属性値を参照するので、select要素である必要があります。）
-      mainSelect[0].onchange = function () {
-         // ▼同じ親要素に含まれているすべての2階層目(サブ)要素を消す
-         var subBox = this.parentNode.getElementsByClassName("subbox");   // 同じ親要素に含まれる.subbox（※select要素に限らず、どんな要素でも構いません。）
-         for( var j=0 ; j<subBox.length ; j++) {
-            subBox[j].style.display = 'none';
-         }
-   
-         // ▼指定された2階層目(サブ)要素だけを表示する
-         if( this.value ) {
-            var targetSub = document.getElementById( this.value );   // 「1階層目のプルダウンメニューで選択されている項目のvalue属性値」と同じ文字列をid属性値に持つ要素を得る
-            targetSub.style.display = 'inline';
-         }
-      }
-   
-   }
-
+// Toggle dropdown open/close when dropdown button is clicked
+dropdownBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleDropdown();
 });
 
-/*
-const els = document.querySelectorAll("li");
-els.forEach( li => {
-   //let eles = li.querySelectorAll("a");
-   //console.log(eles[0].text);
-   li.addEventListener('click', (e) => {
-     //let eles = e.target.querySelectorAll("a");
-     //console.log("select", eles[0].text);
-     console.log("select");
-	   
-
-   });
+// Close dropdown when dom element is clicked
+document.documentElement.addEventListener("click", function () {
+  if (dropdownMenu.classList.contains("show")) {
+    toggleDropdown();
+  }
 });
 
-*/
+

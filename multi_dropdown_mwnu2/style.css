@@ -1,111 +1,80 @@
-.container{
-    padding-top: 4rem;
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  --color: #166e67;
+  --gap: 0.5rem;
+  --radius: 5px;
 }
-.title{
-    color: #fff;
-    margin-bottom: 2rem;
-    text-align: center;
+
+body {
+  margin: 2rem;
+  background-color: #b3e6f4;
+  font-size: 0.9rem;
+  color: black;
 }
-.read{
-    color: #fff;
-    line-height: 1.6;
-    margin:0 auto 2rem;
-    width: 800px;
+
+.btn {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
 }
-  
-.gnav {
-    display: flex;
-    height: 2rem;
-    margin: 0 auto;
-    width: 1000px;
+
+.bx {
+  font-size: 1.1rem;
 }
-.gnav > li {/*親階層のみ幅を25%にする*/
-    width: 25%;
+
+.dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
 }
-/*全てのリスト・リンク共通*/
-.gnav li {
-    list-style: none;
-    position: relative;
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: black;
 }
-.gnav li a {
-    background: #001b34;
-    border-right: 1px solid #eee;
-    color: #fff;
-    display: block;
-    height: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
+
+.dropdown a:hover {
+  background-color: var(--color);
+  color: white;
 }
-/*子階層以降共通*/
-.gnav li li {
-    height: 0;
-    overflow: hidden;
-    transition: .5s;
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0rem);
 }
-.gnav li li a {
-    border-top: 1px solid #eee;
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
 }
-.gnav li:hover > ul > li {
-    height: 2rem;
-    overflow: visible;
-}
-.gnav li ul li ul {
-    left: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-/*一番右のメニュー*/
-.gnav > li:nth-child(5) ul li ul {
-    left: -100%;
-}
-/*aの背景色を指定*/  
-.gnav li:hover a {/*親階層*/
-    background: #00305c;
-}
-.gnav li li a {/*子階層*/
-    background: #00305c;
-}
-.gnav li li:hover a {
-    background: #004789;
-}
-.gnav li ul li ul li a {/*孫階層*/
-    background: #004789;
-}
-.gnav li ul li ul li:hover a {
-    background: #0065c1;
-}
-.gnav li ul li ul li ul li a {/*ひ孫階層*/
-    background: #0065c1;
-}
-.gnav li ul li ul li ul li:hover a {
-    background: #1e7dd4;
-}
-/*リストに「▶︎」を付ける*/
-.gnav > li > ul:before{/*子階層*/
-    border: 5px solid transparent;
-    border-top: 5px solid #fff;
-    content: "";
-    right: 1rem;
-    position: absolute;
-    top: 1rem;
-    transform: translateY(-40%);
-}
-.gnav li ul li ul:before {/*孫階層*/
-    border: 5px solid transparent;
-    border-left: 5px solid #fff;
-    content: "";
-    left: -20px;
-    position: absolute;
-    top: 1em;
-    transform: translateY(-50%);
-}
-.gnav li:nth-child(5) ul li ul:before {/*一番右のメニューの孫階層*/
-    border: 5px solid transparent;
-    border-right: 5px solid #fff;
-    left: auto;
-    right: -20px;
-}
+
 
