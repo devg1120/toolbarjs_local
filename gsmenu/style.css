@@ -11,7 +11,7 @@ body.hide-scrolling {
 
 /* Menu */
 
-.ozmenu ul.ozmenu-nav {
+.gsmenu ul.gsmenu-nav {
     display: flex;
     align-items: flex-start; 
     /* justify-content:space-between; */
@@ -21,16 +21,16 @@ body.hide-scrolling {
 }
 
 
-.ozmenu ul.ozmenu-nav>li {
+.gsmenu ul.gsmenu-nav>li {
     position: relative;
     margin-left: 10px;}
     float: left;
     width: auto;
 }
-.ozmenu ul.ozmenu-nav>li a:hover{
+.gsmenu ul.gsmenu-nav>li a:hover{
     color: rgb(0, 0, 0) !important;
 }
-.ozmenu ul li.dropdownitem>a:after{
+.gsmenu ul li.dropdownitem>a:after{
     width: 15px;
     height: 15px;
     text-align: center;
@@ -45,13 +45,13 @@ body.hide-scrolling {
     -webkit-mask-position: center;
     mask-position: center;
 }
-.ozmenu ul li .dropdown{
+.gsmenu ul li .dropdown{
     display:none;
     position: absolute;
     min-width: 200px;
 }
 @media screen and (min-width: 993px) {
-    .ozmenu ul.ozmenu-nav>li a{
+    .gsmenu ul.gsmenu-nav>li a{
         color: #333 !important;
         font-weight: 500;
         text-decoration: none;
@@ -63,7 +63,7 @@ body.hide-scrolling {
         height: 100%;
         position: relative;
     }
-    .ozmenu ul li.dropdownitem:hover .dropdown{
+    .gsmenu ul li.dropdownitem:hover .dropdown{
         display: block;
         position: absolute;
         margin: 0;
@@ -71,16 +71,16 @@ body.hide-scrolling {
         min-width: 220px;
         padding-top: 0px !important;
     }
-    .ozmenu ul li.dropdownitem:hover > a{
+    .gsmenu ul li.dropdownitem:hover > a{
         border-radius: 8px 8px 0px 0px !important;
     }
-    .ozmenu ul li.dropdownitem ul li.dropdownitem:hover > a{
+    .gsmenu ul li.dropdownitem ul li.dropdownitem:hover > a{
         border-radius: 8px !important;
     }
-    .ozmenu ul li.dropdownitem:hover .dropdown .dropdown{
+    .gsmenu ul li.dropdownitem:hover .dropdown .dropdown{
         display: none;
     }
-    .ozmenu ul li.dropdownitem .dropdown li.dropdownitem:hover .dropdown {
+    .gsmenu ul li.dropdownitem .dropdown li.dropdownitem:hover .dropdown {
         padding-left: 16px;
         position: absolute;
         margin: 0;
@@ -91,18 +91,18 @@ body.hide-scrolling {
         left: 100% !important;
         right: auto !important;
     }
-    .ozmenu ul li.dropdownitem .dropdown .dropdown .dropdown {
+    .gsmenu ul li.dropdownitem .dropdown .dropdown .dropdown {
         display: none !important;
         visibility: hidden;
     }
-    .ozmenu ul li.dropdownitem .dropdown ul {
+    .gsmenu ul li.dropdownitem .dropdown ul {
         list-style: none;
         background-color: #fff;
         float: left;
         padding: 10px;
         border-radius: 0px 8px 8px 8px;
     }
-    .ozmenu ul li.dropdownitem ul li a{
+    .gsmenu ul li.dropdownitem ul li a{
         color: #333 !important;
         font-weight: 400;
         text-decoration: none;
@@ -112,7 +112,7 @@ body.hide-scrolling {
         border-radius: 0px;
         font-size: 14px;
     }
-    .ozmenu ul.ozmenu-nav .dropdown ul li a:hover {
+    .gsmenu ul.gsmenu-nav .dropdown ul li a:hover {
         color: #333 !important;
         padding-left: 7px;
         transition: all 0.15s ease-out;
@@ -151,7 +151,7 @@ body.hide-scrolling {
         }
     }
     /* Dropdown + Dropdown */
-    .ozmenu ul li.dropdownitem ul li .nav-dropdown:after{
+    .gsmenu ul li.dropdownitem ul li .nav-dropdown:after{
         width: 15px;
         height: 15px;
         text-align: center;
@@ -167,30 +167,30 @@ body.hide-scrolling {
         mask-position: center;
     }
 }
-.ozmenu ul.ozmenu-nav .dropdown ul li {
+.gsmenu ul.gsmenu-nav .dropdown ul li {
     float: left;
     width: 100%;
 }
-.ozmenu ul.ozmenu-nav .dropdown ul li a{
+.gsmenu ul.gsmenu-nav .dropdown ul li a{
     padding: 8px 0px;
 }
-.ozmenu ul li.dropdownitem ul li a,
-.ozmenu ul li.dropdownitem ul li .dropdown ul li a {
+.gsmenu ul li.dropdownitem ul li a,
+.gsmenu ul li.dropdownitem ul li .dropdown ul li a {
     border-bottom: 1px dotted #eee;
 }
-.ozmenu ul li.dropdownitem ul li:last-child a,
-.ozmenu ul li.dropdownitem ul li .dropdown ul li:last-child a {
+.gsmenu ul li.dropdownitem ul li:last-child a,
+.gsmenu ul li.dropdownitem ul li .dropdown ul li:last-child a {
     border-bottom: 0px !important;
 }
 /* Dropdown + Dropdown */
-.ozmenu ul li.dropdownitem ul li a:before,
-.ozmenu ul li.dropdownitem ul li .nav-dropdown ul li a:after{
+.gsmenu ul li.dropdownitem ul li a:before,
+.gsmenu ul li.dropdownitem ul li .nav-dropdown ul li a:after{
     display: none !important;
 }
-.ozmenu ul li.dropdownitem ul li .nav-dropdown ul li:last-child a{
+.gsmenu ul li.dropdownitem ul li .nav-dropdown ul li:last-child a{
     border-bottom: 0px !important;
 }
-.ozmenu ul li.dropdownitem .dropdown ul li.dropdownitem {
+.gsmenu ul li.dropdownitem .dropdown ul li.dropdownitem {
     display: inline-block;
     height: 100%;
     position: relative;
@@ -215,11 +215,11 @@ body.hide-scrolling {
     .menu-close {
         display: none; 
     }
-    .ozmenu {
+    .gsmenu {
         position: relative;
         display: none;
     }
-    .ozmenu.active {
+    .gsmenu.active {
         display: block;
     }
     .menu-open {
@@ -235,13 +235,13 @@ body.hide-scrolling {
         top: 0px;
         float: left;
     }
-    .ozmenu-nav {
+    .gsmenu-nav {
         display: none !important;
     }
-    .ozmenu.active .ozmenu-nav {
+    .gsmenu.active .gsmenu-nav {
         display: block !important;
     }
-    .ozmenu.active{
+    .gsmenu.active{
         position: fixed;
         left: 0px;
         top: 0px;
@@ -251,7 +251,7 @@ body.hide-scrolling {
         display: flex;
         z-index: 14;
     }
-    .ozmenu.active .ozmenu-nav{
+    .gsmenu.active .gsmenu-nav{
         background-color: #fff;
         float: left;
         margin-top: 0px;
@@ -261,7 +261,7 @@ body.hide-scrolling {
         overflow: scroll;
         transform-origin: top center !important;
     }
-    .ozmenu.active .ozmenu-nav, .menu-close {
+    .gsmenu.active .gsmenu-nav, .menu-close {
         animation: translateX 400ms 0ms ease-in-out forwards !important;
     }
     @keyframes translateX {
@@ -277,11 +277,11 @@ body.hide-scrolling {
             transform: translateX(0px);
         }
     }
-    .ozmenu ul.ozmenu-nav>li {
+    .gsmenu ul.gsmenu-nav>li {
         float: left;
         width: 100%;
     }
-    .ozmenu ul.ozmenu-nav>li a{
+    .gsmenu ul.gsmenu-nav>li a{
         float: left;
         width: 100%;
         text-decoration: none;
@@ -289,7 +289,7 @@ body.hide-scrolling {
         padding: 10px 0px;
         border-bottom: 1px solid #ddd;
     }
-    .ozmenu ul.ozmenu-nav>li a:hover {
+    .gsmenu ul.gsmenu-nav>li a:hover {
         float: left;
         width: 100%;
         transition: all 0.25s ease-out;
@@ -297,26 +297,26 @@ body.hide-scrolling {
         color: rgb(103, 130, 252) !important;
         padding: 10px 0px;
     }
-    .ozmenu ul li.dropdownitem>a:hover:after{
+    .gsmenu ul li.dropdownitem>a:hover:after{
         background-color: rgb(103, 130, 252) !important;
     }
     .nav-dropdown.opened {
         color: rgb(103, 130, 252) !important;
         border-bottom: 1px solid rgba(103, 130, 252, 0.5) !important;
     }
-    .ozmenu ul.ozmenu-nav>li:last-child a{
+    .gsmenu ul.gsmenu-nav>li:last-child a{
         border-bottom: 0px solid #ddd;
     }
-    .ozmenu.active ul li .nav-dropdown.opened + .dropdown ul {
+    .gsmenu.active ul li .nav-dropdown.opened + .dropdown ul {
         list-style: none;
         float: left;
         margin-left: 0px;
         padding-left: 7px;
     }
-    .ozmenu.active ul li .nav-dropdown.opened + .dropdown ul .dropdown ul {
+    .gsmenu.active ul li .nav-dropdown.opened + .dropdown ul .dropdown ul {
         padding-left: 15px;
     }
-    .ozmenu.active ul li .nav-dropdown.opened + .dropdown{
+    .gsmenu.active ul li .nav-dropdown.opened + .dropdown{
         display: block;
         position: relative;
         margin: 0;
@@ -325,7 +325,7 @@ body.hide-scrolling {
         padding-top: 0px !important;
         float: left;
     }
-    .ozmenu.active ul li.dropdownitem:hover + .dropdown + .dropdown{
+    .gsmenu.active ul li.dropdownitem:hover + .dropdown + .dropdown{
         display: none;
     }
     #menu-overlay {
@@ -380,19 +380,19 @@ body.hide-scrolling {
         mask-image: url('data:image/svg+xml;charset=utf-8,<svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"></path></svg>');
     }
 
-    .ozmenu.active ul li.dropdownitem>a.opened:after{
+    .gsmenu.active ul li.dropdownitem>a.opened:after{
         -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>') !important;
         mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>') !important;
     }
 
 }
 @media screen and (max-width: 500px) {
-    .ozmenu.active {
+    .gsmenu.active {
         width: 70%;
     }
 }
 @media screen and (max-width: 400px) {
-    .ozmenu.active{
+    .gsmenu.active{
         width: 100%;
     }
 }

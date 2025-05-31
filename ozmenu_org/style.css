@@ -5,25 +5,19 @@ body {
 body.hide-scrolling {
     overflow-y: hidden;
 }
-/*
 .container { width: 80%; margin: 0 auto;}
-*/
 
 /* Menu */
-
 .ozmenu ul.ozmenu-nav {
     display: flex;
-    align-items: flex-start; 
-    /* justify-content:space-between; */
+    align-items: flex-start;
+    justify-content:space-between;
     list-style: none;
-    /*font-family: 'Roboto', sans-serif;*/
-    padding-left: 0;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 0px;
 }
-
-
 .ozmenu ul.ozmenu-nav>li {
     position: relative;
-    margin-left: 10px;}
     float: left;
     width: auto;
 }
